@@ -1,7 +1,6 @@
 package main
 
 import (
-	"log"
 	"sort"
 )
 
@@ -169,16 +168,6 @@ func FindWorryStopper(monkeys []Monkey) int {
 	}
 
 	return worryStopper
-}
-
-func main() {
-	partOne := DayEleven(ActualMonkeys, 20, func(worry int) int { return worry / 3 })
-
-	worryStopper := FindWorryStopper(ActualMonkeys)
-	partTwo := DayEleven(ActualMonkeys, 10_000, func(worry int) int { return worry % worryStopper })
-
-	log.Printf("Part 1: %d", partOne)
-	log.Printf("Part 2: %d", partTwo)
 }
 
 func DayEleven(monkeys []Monkey, rounds int, reducer func(int) int) int {
