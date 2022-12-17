@@ -36,11 +36,6 @@ func hashOpenState(aaaaaaah []bool) string {
 	return res
 }
 
-func main() {
-	res := DaySixteen("../input/16_1-actual-input.txt", 26, 1)
-	log.Println(res)
-}
-
 func maxFlow(valveIndex int, timeLeft int, openState []bool, elephants int, startIndex int, totalTime int) int {
 	curState := state{
 		valveIndex: valveIndex,
